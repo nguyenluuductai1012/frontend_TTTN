@@ -1,22 +1,22 @@
 // assets
-import { IconDashboard } from '@tabler/icons';
+import { IconSmartHome } from '@tabler/icons';
 
 // constant
-const icons = { IconDashboard };
+const icons = { IconSmartHome };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
 const dashboard = {
     id: 'dashboard',
-    title: 'Dashboard',
+    title: '',
     type: 'group',
     children: [
         {
             id: 'default',
-            title: 'Dashboard',
+            title: 'Trang Tổng Quan',
             type: 'item',
             url: '/dashboard/default',
-            icon: icons.IconDashboard,
+            icon: icons.IconSmartHome,
             breadcrumbs: false
         }
     ]

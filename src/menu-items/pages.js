@@ -10,27 +10,26 @@ const icons = {
 
 const pages = {
     id: 'pages',
-    title: 'Pages',
-    caption: 'Pages Caption',
+    title: '',
     type: 'group',
     children: [
         {
             id: 'authentication',
-            title: 'Authentication',
+            title: 'Quản Lý Tài Khoản',
             type: 'collapse',
             icon: icons.IconKey,
 
             children: [
                 {
                     id: 'login3',
-                    title: 'Login',
+                    title: 'Đăng Nhập',
                     type: 'item',
                     url: '/pages/login/login3',
                     target: true
                 },
                 {
                     id: 'register3',
-                    title: 'Register',
+                    title: 'Tạo Tài Khoản',
                     type: 'item',
                     url: '/pages/register/register3',
                     target: true

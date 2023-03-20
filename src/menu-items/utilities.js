@@ -1,61 +1,61 @@
 // assets
-import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons';
+import { IconUsers, IconBolt, IconFileInvoice, IconReceipt2 } from '@tabler/icons';
 
 // constant
 const icons = {
-    IconTypography,
-    IconPalette,
-    IconShadow,
-    IconWindmill
+    IconUsers,
+    IconBolt,
+    IconFileInvoice,
+    IconReceipt2
 };
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
 const utilities = {
     id: 'utilities',
-    title: 'Utilities',
+    title: '',
     type: 'group',
     children: [
         {
             id: 'util-typography',
-            title: 'Typography',
+            title: 'Quản Lý Khách Hàng',
             type: 'item',
             url: '/utils/util-typography',
-            icon: icons.IconTypography,
+            icon: icons.IconUsers,
             breadcrumbs: false
         },
         {
             id: 'util-color',
-            title: 'Color',
+            title: 'Quản Lý Điện Kế',
             type: 'item',
             url: '/utils/util-color',
-            icon: icons.IconPalette,
+            icon: icons.IconBolt,
             breadcrumbs: false
         },
         {
             id: 'util-shadow',
-            title: 'Shadow',
+            title: 'Quản Lý Hóa Đơn',
             type: 'item',
             url: '/utils/util-shadow',
-            icon: icons.IconShadow,
+            icon: icons.IconFileInvoice,
             breadcrumbs: false
         },
         {
             id: 'icons',
-            title: 'Icons',
+            title: 'Bảng Đơn Giá Điện',
             type: 'collapse',
-            icon: icons.IconWindmill,
+            icon: icons.IconReceipt2,
             children: [
                 {
                     id: 'tabler-icons',
-                    title: 'Tabler Icons',
+                    title: 'Bảng Giá Điện Mới',
                     type: 'item',
                     url: '/icons/tabler-icons',
                     breadcrumbs: false
                 },
                 {
                     id: 'material-icons',
-                    title: 'Material Icons',
+                    title: 'Bảng Giá Điện Cũ',
                     type: 'item',
                     url: '/icons/material-icons',
                     breadcrumbs: false

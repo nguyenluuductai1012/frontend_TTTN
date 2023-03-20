@@ -34,10 +34,10 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
 import UpgradePlanCard from './UpgradePlanCard';
-import User1 from 'assets/images/users/user-round.svg';
+import User1 from 'assets/images/users/m10.svg';
 
 // assets
-import { IconLogout, IconSearch, IconSettings, IconUser } from '@tabler/icons';
+import { IconLogout, IconSearch, IconSettings, IconHelp } from '@tabler/icons';
 
 // ==============================|| PROFILE MENU ||============================== //
 
@@ -156,85 +156,24 @@ const ProfileSection = () => {
                                 <MainCard border={false} elevation={16} content={false} boxShadow shadow={theme.shadows[16]}>
                                     <Box sx={{ p: 2 }}>
                                         <Stack>
-                                            <Stack direction="row" spacing={0.5} alignItems="center">
-                                                <Typography variant="h4">Good Morning,</Typography>
-                                                <Typography component="span" variant="h4" sx={{ fontWeight: 400 }}>
-                                                    Johne Doe
+                                            <Stack direction="row" spacing={1} alignItems="center">
+                                                <Typography variant="h3">Xin chào,</Typography>
+                                                <Typography component="span" variant="h3" sx={{ fontWeight: 400 }}>
+                                                    Messi
                                                 </Typography>
                                             </Stack>
-                                            <Typography variant="subtitle2">Project Admin</Typography>
+                                            <Typography variant="subtitle2">Admin</Typography>
                                         </Stack>
-                                        <OutlinedInput
-                                            sx={{ width: '100%', pr: 1, pl: 2, my: 2 }}
-                                            id="input-search-profile"
-                                            value={value}
-                                            onChange={(e) => setValue(e.target.value)}
-                                            placeholder="Search profile options"
-                                            startAdornment={
-                                                <InputAdornment position="start">
-                                                    <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-                                                </InputAdornment>
-                                            }
-                                            aria-describedby="search-helper-text"
-                                            inputProps={{
-                                                'aria-label': 'weight'
-                                            }}
-                                        />
                                         <Divider />
                                     </Box>
-                                    <PerfectScrollbar style={{ height: '100%', maxHeight: 'calc(100vh - 250px)', overflowX: 'hidden' }}>
+                                    <PerfectScrollbar style={{ height: '100%', maxHeight: 'calc(100vh - 150px)', overflowX: 'hidden' }}>
                                         <Box sx={{ p: 2 }}>
-                                            <UpgradePlanCard />
-                                            <Divider />
-                                            <Card
-                                                sx={{
-                                                    bgcolor: theme.palette.primary.light,
-                                                    my: 2
-                                                }}
-                                            >
-                                                <CardContent>
-                                                    <Grid container spacing={3} direction="column">
-                                                        <Grid item>
-                                                            <Grid item container alignItems="center" justifyContent="space-between">
-                                                                <Grid item>
-                                                                    <Typography variant="subtitle1">Start DND Mode</Typography>
-                                                                </Grid>
-                                                                <Grid item>
-                                                                    <Switch
-                                                                        color="primary"
-                                                                        checked={sdm}
-                                                                        onChange={(e) => setSdm(e.target.checked)}
-                                                                        name="sdm"
-                                                                        size="small"
-                                                                    />
-                                                                </Grid>
-                                                            </Grid>
-                                                        </Grid>
-                                                        <Grid item>
-                                                            <Grid item container alignItems="center" justifyContent="space-between">
-                                                                <Grid item>
-                                                                    <Typography variant="subtitle1">Allow Notifications</Typography>
-                                                                </Grid>
-                                                                <Grid item>
-                                                                    <Switch
-                                                                        checked={notification}
-                                                                        onChange={(e) => setNotification(e.target.checked)}
-                                                                        name="sdm"
-                                                                        size="small"
-                                                                    />
-                                                                </Grid>
-                                                            </Grid>
-                                                        </Grid>
-                                                    </Grid>
-                                                </CardContent>
-                                            </Card>
-                                            <Divider />
                                             <List
                                                 component="nav"
                                                 sx={{
-                                                    width: '100%',
-                                                    maxWidth: 350,
-                                                    minWidth: 300,
+                                                    width: '80%',
+                                                    maxWidth: 250,
+                                                    minWidth: 200,
                                                     backgroundColor: theme.palette.background.paper,
                                                     borderRadius: '10px',
                                                     [theme.breakpoints.down('md')]: {
@@ -253,7 +192,7 @@ const ProfileSection = () => {
                                                     <ListItemIcon>
                                                         <IconSettings stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>
-                                                    <ListItemText primary={<Typography variant="body2">Account Settings</Typography>} />
+                                                    <ListItemText primary={<Typography variant="body2">Quản lý tài khoản</Typography>} />
                                                 </ListItemButton>
                                                 <ListItemButton
                                                     sx={{ borderRadius: `${customization.borderRadius}px` }}
@@ -261,23 +200,13 @@ const ProfileSection = () => {
                                                     onClick={(event) => handleListItemClick(event, 1, '/user/social-profile/posts')}
                                                 >
                                                     <ListItemIcon>
-                                                        <IconUser stroke={1.5} size="1.3rem" />
+                                                        <IconHelp stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>
                                                     <ListItemText
                                                         primary={
                                                             <Grid container spacing={1} justifyContent="space-between">
                                                                 <Grid item>
-                                                                    <Typography variant="body2">Social Profile</Typography>
-                                                                </Grid>
-                                                                <Grid item>
-                                                                    <Chip
-                                                                        label="02"
-                                                                        size="small"
-                                                                        sx={{
-                                                                            bgcolor: theme.palette.warning.dark,
-                                                                            color: theme.palette.background.default
-                                                                        }}
-                                                                    />
+                                                                    <Typography variant="body2">Trợ giúp & hỗ trợ</Typography>
                                                                 </Grid>
                                                             </Grid>
                                                         }
@@ -291,7 +220,7 @@ const ProfileSection = () => {
                                                     <ListItemIcon>
                                                         <IconLogout stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>
-                                                    <ListItemText primary={<Typography variant="body2">Logout</Typography>} />
+                                                    <ListItemText primary={<Typography variant="body2">Đăng xuất</Typography>} />
                                                 </ListItemButton>
                                             </List>
                                         </Box>
