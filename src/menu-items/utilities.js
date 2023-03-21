@@ -1,12 +1,13 @@
 // assets
-import { IconUsers, IconBolt, IconFileInvoice, IconReceipt2 } from '@tabler/icons';
+import { IconUsers, IconBolt, IconFileInvoice, IconReceipt2, IconZoomMoney } from '@tabler/icons';
 
 // constant
 const icons = {
     IconUsers,
     IconBolt,
     IconFileInvoice,
-    IconReceipt2
+    IconReceipt2,
+    IconZoomMoney
 };
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
@@ -17,26 +18,26 @@ const utilities = {
     type: 'group',
     children: [
         {
-            id: 'util-typography',
+            id: 'util-qlkh',
             title: 'Quản Lý Khách Hàng',
             type: 'item',
-            url: '/utils/util-typography',
+            url: '/utils/util-qlkh',
             icon: icons.IconUsers,
             breadcrumbs: false
         },
         {
-            id: 'util-color',
+            id: 'util-qldk',
             title: 'Quản Lý Điện Kế',
             type: 'item',
-            url: '/utils/util-color',
+            url: '/utils/util-qldk',
             icon: icons.IconBolt,
             breadcrumbs: false
         },
         {
-            id: 'util-shadow',
+            id: 'util-qlhd',
             title: 'Quản Lý Hóa Đơn',
             type: 'item',
-            url: '/utils/util-shadow',
+            url: '/utils/util-qlhd',
             icon: icons.IconFileInvoice,
             breadcrumbs: false
         },
@@ -47,20 +48,28 @@ const utilities = {
             icon: icons.IconReceipt2,
             children: [
                 {
-                    id: 'tabler-icons',
+                    id: 'banggiamoi',
                     title: 'Bảng Giá Điện Mới',
                     type: 'item',
-                    url: '/icons/tabler-icons',
+                    url: '/icons/banggiamoi',
                     breadcrumbs: false
                 },
                 {
-                    id: 'material-icons',
+                    id: 'banggiacu',
                     title: 'Bảng Giá Điện Cũ',
                     type: 'item',
-                    url: '/icons/material-icons',
+                    url: '/icons/banggiacu',
                     breadcrumbs: false
                 }
             ]
+        },
+        {
+            id: 'util-tiendien',
+            title: 'Tính tiền điện',
+            type: 'item',
+            url: '/utils/util-tiendien',
+            icon: icons.IconZoomMoney,
+            breadcrumbs: false
         }
     ]
 };

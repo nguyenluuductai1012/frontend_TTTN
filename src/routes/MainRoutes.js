@@ -8,11 +8,12 @@ import Loadable from 'ui-component/Loadable';
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
 // utilities routing
-const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
-const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
-const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
-const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
-const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
+const UtilsQLKHACHHANG = Loadable(lazy(() => import('views/utilities/KHACHHANG')));
+const UtilsDIENKE = Loadable(lazy(() => import('views/utilities/DIENKE')));
+const UtilsHOADON = Loadable(lazy(() => import('views/utilities/HOADON')));
+const UtilsBANGIACU = Loadable(lazy(() => import('views/utilities/BANGIACU')));
+const UtilsBANGGIAMOI = Loadable(lazy(() => import('views/utilities/BANGGIAMOI')));
+const UtilsTiendien = Loadable(lazy(() => import('views/utilities/Tiendien')));
 
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
@@ -40,8 +41,8 @@ const MainRoutes = {
             path: 'utils',
             children: [
                 {
-                    path: 'util-typography',
-                    element: <UtilsTypography />
+                    path: 'util-qlkh',
+                    element: <UtilsQLKHACHHANG />
                 }
             ]
         },
@@ -49,8 +50,8 @@ const MainRoutes = {
             path: 'utils',
             children: [
                 {
-                    path: 'util-color',
-                    element: <UtilsColor />
+                    path: 'util-qldk',
+                    element: <UtilsDIENKE />
                 }
             ]
         },
@@ -58,8 +59,8 @@ const MainRoutes = {
             path: 'utils',
             children: [
                 {
-                    path: 'util-shadow',
-                    element: <UtilsShadow />
+                    path: 'util-qlhd',
+                    element: <UtilsHOADON />
                 }
             ]
         },
@@ -67,8 +68,8 @@ const MainRoutes = {
             path: 'icons',
             children: [
                 {
-                    path: 'tabler-icons',
-                    element: <UtilsTablerIcons />
+                    path: 'banggiamoi',
+                    element: <UtilsBANGGIAMOI />
                 }
             ]
         },
@@ -76,8 +77,17 @@ const MainRoutes = {
             path: 'icons',
             children: [
                 {
-                    path: 'material-icons',
-                    element: <UtilsMaterialIcons />
+                    path: 'banggiacu',
+                    element: <UtilsBANGIACU />
+                }
+            ]
+        },
+        {
+            path: 'utils',
+            children: [
+                {
+                    path: 'util-tiendien',
+                    element: <UtilsTiendien />
                 }
             ]
         },

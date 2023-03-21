@@ -13,7 +13,7 @@ const dashboard = {
     children: [
         {
             id: 'default',
-            title: 'Trang Tổng Quan',
+            title: 'Trang Chủ',
             type: 'item',
             url: '/dashboard/default',
             icon: icons.IconSmartHome,
